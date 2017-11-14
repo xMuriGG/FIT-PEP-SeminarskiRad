@@ -72,6 +72,15 @@ namespace CZE_Desktop {
         /// <summary>
         ///   Looks up a localized string similar to http://localhost:8081/.
         /// </summary>
+        internal static string localroute {
+            get {
+                return ResourceManager.GetString("localroute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://muris-cengic.gear.host.
+        /// </summary>
         internal static string route {
             get {
                 return ResourceManager.GetString("route", resourceCulture);
