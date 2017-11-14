@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="CZE_Mobile.Pages.Prijava.PrijavaMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CZE_Mobile.Pages.Prijava"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" Margin="30,0,30,0">
+            <Button x:Name="btn_LogIn"  Content="LogIn" HorizontalAlignment="Stretch" Click="btn_LogIn_Click" VerticalAlignment="Stretch"/>
+            <Button x:Name="btn_Registracija" Content="Zahtjev za ragistraciju" Click="btn_Registracija_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </StackPanel>
+    </Grid>
+</Page>

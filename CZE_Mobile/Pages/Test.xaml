@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="CZE_Mobile.Pages.Test"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CZE_Mobile.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+        <ScrollViewer>
+            <ItemsControl >
+                <Rectangle Stroke="#FFC3C3C3"  Height="300" Fill="Black" StrokeThickness="4" Width="200"/>
+                <Rectangle Stroke="#FFC3C3C3" Width="200" Height="300" Fill="Black" StrokeThickness="4"/>
+                <Rectangle Stroke="#FFC3C3C3" Height="300" Fill="Black" StrokeThickness="4" Width="200"/>
+                <Rectangle Stroke="#FFC3C3C3" Width="200" Height="300" Fill="Black" StrokeThickness="4"/>
+                <Rectangle Stroke="#FFC3C3C3"  Width="200" Height="300" Fill="Black" StrokeThickness="4"/>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+
+</Page>

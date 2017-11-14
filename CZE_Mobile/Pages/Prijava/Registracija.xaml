@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="CZE_Mobile.Pages.Prijava.Registracija"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CZE_Mobile.Pages.Prijava"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer Margin="0,0.333,0,9.667">
+
+
+        <Grid x:Name="LayoutRoot" Height="Auto" Width="Auto">
+
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Panel -->
+            <!--
+            <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            </StackPanel>-->
+
+            <!--TODO: Content should be placed within the following grid-->
+            <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,0,19,0">
+                <StackPanel>
+                    <TextBlock Text="CZE::Zahtjev za registraciju" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+                    <TextBox x:Name="imeInput" Header="Ime:" />
+                    <TextBox x:Name="prezimeInput" Header="Prezime:" />
+                    <DatePicker x:Name="datumRodjenjaInput" Header="Datum rođenja:"/>
+                    <ComboBox x:Name="spolInput" Header="Spol:"  PlaceholderText="Odaberite spol"/>
+                    <TextBox x:Name="emailInput" Header="E-mail:" DataContext="" InputScope="EmailSmtpAddress" />
+                    <TextBox x:Name="adresaInput" Header="Adresa stanovanja:" />
+                    <ComboBox x:Name="mjestoRodjenjaInput" Header="Mjesto rođenja:" PlaceholderText="Odaberite grad"/>
+                    <TextBox x:Name="brojTelefona" Header="Broj mobilnog telefona:" PlaceholderText="+3876#######" InputScope="TelephoneNumber"/>
+                    <Button x:Name="registracijaButton" Click="registracijaButton_Click" Content="Registracija" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>

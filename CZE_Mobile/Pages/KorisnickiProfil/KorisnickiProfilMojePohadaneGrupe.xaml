@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="CZE_Mobile.Pages.KorisnickiProfil.KorisnickiProfilMojePohadaneGrupe"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CZE_Mobile.Pages.KorisnickiProfil"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:grupe="using:CZE_Mobile.Pages.Grupe"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <local:CertifikatToColorConverter x:Key="CertifikatToColor" />
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="CZE::Grupe koje sam pohađao" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        </StackPanel>
+
+        
+        
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ListView x:Name="GrupeList" IsItemClickEnabled="True">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <Border BorderBrush="WhiteSmoke" BorderThickness="1" HorizontalAlignment="Stretch">
+                            <Grid Background="{Binding CertifikatOdobren, Converter={StaticResource CertifikatToColor}}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding GrupaNaziv}"  HorizontalAlignment="Center" Grid.ColumnSpan="3" />
+                                <TextBlock Grid.Column="0" Grid.Row="1" Text="{Binding TipNaziv}"  HorizontalAlignment="Left" />
+                                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding KursNaziv}" Style="{StaticResource TitleTextBlockStyle}" HorizontalAlignment="Center"/>
+                                <TextBlock Grid.Column="0" Grid.Row="3" Text="{Binding Predavac}" HorizontalAlignment="Left" Grid.ColumnSpan="3" />
+                                <TextBlock Grid.Column="0" Grid.Row="3" Text="{Binding Uplaceno}" HorizontalAlignment="Right" Grid.ColumnSpan="3" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00A824E6-71B3-4061-B4A7-190F867F4CCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CZE_Desktop</RootNamespace>
+    <AssemblyName>CZE_Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\CertifikatiKandidata\CertifikatiKandidata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CertifikatiKandidata\CertifikatiKandidata.Designer.cs">
+      <DependentUpon>CertifikatiKandidata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CertifikatiKandidata\CertifikatiKandidataCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CertifikatiKandidata\CertifikatiKandidataCreate.Designer.cs">
+      <DependentUpon>CertifikatiKandidataCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CertifikatiKandidata\PrintanjeCertifikata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CertifikatiKandidata\PrintanjeCertifikata.Designer.cs">
+      <DependentUpon>PrintanjeCertifikata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KorisnickiNalog\KorisnickiNalogCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KorisnickiNalog\KorisnickiNalogCreate.Designer.cs">
+      <DependentUpon>KorisnickiNalogCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KursForms\GrupaCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KursForms\GrupaCreate.Designer.cs">
+      <DependentUpon>GrupaCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KursForms\KursCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KursForms\KursCreate.Designer.cs">
+      <DependentUpon>KursCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KursForms\KursMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KursForms\KursMain.Designer.cs">
+      <DependentUpon>KursMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KursForms\TipKursaCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KursForms\TipKursaCreate.Designer.cs">
+      <DependentUpon>TipKursaCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\OsobaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\OsobaForm.Designer.cs">
+      <DependentUpon>OsobaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\Promote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\Promote.Designer.cs">
+      <DependentUpon>Promote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\PromoteToKandidat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\PromoteToKandidat.Designer.cs">
+      <DependentUpon>PromoteToKandidat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\PromoteToZaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OsobaForms\PromoteToZaposlenik.Designer.cs">
+      <DependentUpon>PromoteToZaposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Uplate kandidata\UplateKandidata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Uplate kandidata\UplateKandidata.Designer.cs">
+      <DependentUpon>UplateKandidata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Uplate kandidata\UplateKandidataCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Uplate kandidata\UplateKandidataCreate.Designer.cs">
+      <DependentUpon>UplateKandidataCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CertifikatiKandidata\CertifikatiKandidata.resx">
+      <DependentUpon>CertifikatiKandidata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CertifikatiKandidata\CertifikatiKandidataCreate.resx">
+      <DependentUpon>CertifikatiKandidataCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CertifikatiKandidata\PrintanjeCertifikata.resx">
+      <DependentUpon>PrintanjeCertifikata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CertifikatiKandidata\report_printanjeCertifikata.rdlc" />
+    <EmbeddedResource Include="Forms\KorisnickiNalog\KorisnickiNalogCreate.resx">
+      <DependentUpon>KorisnickiNalogCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KursForms\GrupaCreate.resx">
+      <DependentUpon>GrupaCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KursForms\KursCreate.resx">
+      <DependentUpon>KursCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KursForms\KursMain.resx">
+      <DependentUpon>KursMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KursForms\TipKursaCreate.resx">
+      <DependentUpon>TipKursaCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OsobaForms\OsobaForm.resx">
+      <DependentUpon>OsobaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OsobaForms\Promote.resx">
+      <DependentUpon>Promote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OsobaForms\PromoteToKandidat.resx">
+      <DependentUpon>PromoteToKandidat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OsobaForms\PromoteToZaposlenik.resx">
+      <DependentUpon>PromoteToZaposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Uplate kandidata\UplateKandidata.resx">
+      <DependentUpon>UplateKandidata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Uplate kandidata\UplateKandidataCreate.resx">
+      <DependentUpon>UplateKandidataCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CZE_API.Models.CertifikatPrintVM.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CZE_API\CZE_API.csproj">
+      <Project>{a08d4197-ad2d-491f-8eb1-2bbad9683d4b}</Project>
+      <Name>CZE_API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CZE_DAL\CZE_DAL.csproj">
+      <Project>{2b4c8bdb-02f0-4325-8f06-0ca9b390b80e}</Project>
+      <Name>CZE_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

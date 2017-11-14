@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="CZE_Mobile.Pages.Kurs.KursOcjena"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CZE_Mobile.Pages.Kurs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="CZE::Ocjeni kurs" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1">
+            <!--TODO: Content should be placed within the following grid-->
+            <Grid  x:Name="ContentRoot" Margin="19,9.5,19,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!--Headers-->
+
+                <TextBlock Text="Kurs:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock Text="Opis:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="1"/>
+                <TextBlock Text="Tip kursa:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="2"/>
+                <TextBlock Text="Trajanje:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="3"/>
+                <TextBlock Text="Cijena:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="4"/>
+                <TextBlock Text="Opis:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="5"/>
+                <TextBlock Text="Kategorija:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="6"/>
+                <TextBlock Text="Ocjena:" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="7"/>
+
+                <!--Data-->
+
+                <TextBlock x:Name="kurs" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="0"/>
+                <TextBlock x:Name="opisKursa" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="tipKursa" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="2"/>
+                <TextBlock x:Name="trajanje" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="3"/>
+                <TextBlock x:Name="cijena" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="4"/>
+                <TextBlock x:Name="opisTipaKursa" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="5"/>
+                <TextBlock x:Name="kategorija" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" Grid.Row="6"/>
+                <ComboBox x:Name="cB_Ocjena" Grid.Column="1" Grid.Row="7" PlaceholderText="Ocjena" SelectionChanged="cB_Ocjena_SelectionChanged" DropDownOpened="cB_Ocjena_DropDownOpened"></ComboBox>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

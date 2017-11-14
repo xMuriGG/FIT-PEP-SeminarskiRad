@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="CZE_Mobile.Pages.Prijava.LogIn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CZE_Mobile.Pages.Prijava"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Text="CZE::Login" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <StackPanel Grid.Row="0" Margin="19,0,0,0">
+                <TextBox Name="korisnickoImeInput" Header="Korisničko ime: test" InputScope="EmailSmtpAddress" PlaceholderText="Korisničko ime ili Email"/>
+                <PasswordBox Name="korisnickiPassInput" Header="Lozinka: test123"></PasswordBox>
+                <Button Name="BTN_LogIn" Content="LogIn" Click="LogIn_Click" ></Button>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
